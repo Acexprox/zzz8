@@ -192,26 +192,13 @@ const HomePage = () => {
  {/* مساحة بيضاء فارغة للجوال فقط - تم تقليلها بسبب العنوان الأكبر */}
 
  <div className="block sm:hidden h-6"></div>
- <div className="hero-subtitle-container mb-0 sm:mb-8">
-   <p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium mb-6 tracking-wide relative">
-     <span className="inline-block relative z-10 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
-       نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
-     </span>
-     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-100/30 to-transparent blur-xl opacity-50 animate-pulse"></div>
-   </p>
-   
-   <div className="flex items-center justify-center sm:justify-start gap-4 mt-4">
-     <div className="flex items-center gap-2 text-sm text-gray-600">
-       <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-ping"></div>
-       <span className="font-medium">موثوق من آلاف العملاء</span>
-     </div>
-     <div className="w-px h-4 bg-gray-300"></div>
-     <div className="flex items-center gap-2 text-sm text-gray-600">
-       <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
-       <span className="font-medium">معاملات آمنة 100%</span>
-     </div>
-   </div>
- </div>
+<p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl mb-0 sm:mb-8 leading-relaxed font-medium tracking-wide relative overflow-hidden">
+  <span className="hero-text-gradient bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent font-semibold leading-relaxed tracking-wide relative z-10 block text-shadow-luxury">
+    نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
+  </span>
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/20 to-transparent opacity-60 blur-2xl transform rotate-1 scale-110 animate-subtle-float"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-orange-200/10 via-yellow-200/15 to-orange-200/10 opacity-40 blur-3xl transform -rotate-1 scale-105 animate-gentle-pulse"></div>
+</p>
  {/* زر ابدأ مشروعك الآن فقط في الجوال - تم نقله للأسفل */}
  
  {/* الأزرار معاً في سطح المكتب */}
