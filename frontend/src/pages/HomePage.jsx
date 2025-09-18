@@ -192,11 +192,12 @@ const HomePage = () => {
  {/* مساحة بيضاء فارغة للجوال فقط - تم تقليلها بسبب العنوان الأكبر */}
 
  <div className="block sm:hidden h-6"></div>
-<p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl mb-0 sm:mb-8 leading-relaxed font-medium tracking-wide relative">
-  <span className="hero-professional-text text-gray-800 font-semibold leading-relaxed tracking-wide relative z-10 block">
+<p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl mb-0 sm:mb-8 leading-snug font-medium tracking-wide relative">
+  <span className="hero-enhanced-text bg-gradient-to-r from-slate-700 via-gray-700 to-slate-800 bg-clip-text text-transparent font-semibold leading-snug tracking-wide relative z-10 block">
     نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
   </span>
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100/40 to-transparent opacity-60 blur-xl scale-105"></div>
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-200/30 to-transparent opacity-50 blur-lg scale-103 animate-subtle-glow"></div>
+  <div className="absolute inset-0 bg-gradient-to-br from-gray-100/20 via-transparent to-gray-100/20 opacity-40 blur-xl scale-102"></div>
 </p>
  {/* زر ابدأ مشروعك الآن فقط في الجوال - تم نقله للأسفل */}
  
