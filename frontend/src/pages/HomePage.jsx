@@ -192,9 +192,28 @@ const HomePage = () => {
  {/* مساحة بيضاء فارغة للجوال فقط - تم تقليلها بسبب العنوان الأكبر */}
 
  <div className="block sm:hidden h-6"></div>
- <p className="hero-subtitle text-4xl sm:text-2xl lg:text-3xl text-gray-700 mb-0 sm:mb-8 leading-tight font-semibold">
- نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
- </p>
+ <div className="hero-subtitle-container mb-0 sm:mb-8">
+   <p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl text-gray-600 leading-relaxed font-medium mb-4 sm:mb-6 tracking-wide">
+     <span className="inline-block opacity-90 transform transition-all duration-500 hover:opacity-100">
+       نضع بين يديك تجربة مالية مبتكرة ومصممة 
+     </span>
+     <br className="hidden sm:block" />
+     <span className="inline-block opacity-90 transform transition-all duration-500 hover:opacity-100" style={{animationDelay: '0.3s'}}>
+       لتلبية معاملاتك اليومية بأعلى درجات الكفاءة
+     </span>
+   </p>
+   
+   <div className="hero-subtitle-highlight flex items-center justify-center sm:justify-start gap-3 mt-4 sm:mt-6">
+     <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200/50">
+       <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
+       <span className="text-sm font-medium text-gray-700">آمن وموثوق</span>
+     </div>
+     <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200/50">
+       <div className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+       <span className="text-sm font-medium text-gray-700">سريع ومبتكر</span>
+     </div>
+   </div>
+ </div>
  {/* زر ابدأ مشروعك الآن فقط في الجوال - تم نقله للأسفل */}
  
  {/* الأزرار معاً في سطح المكتب */}
