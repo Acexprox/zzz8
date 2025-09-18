@@ -104,108 +104,172 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
   text-decoration: none !important;
 }
 
-/* Hero subtitle enhancements - Professional Clean Design */
+/* Hero subtitle enhancements - Enhanced Professional Design */
 .hero-subtitle {
   position: relative;
   z-index: 2;
 }
 
-.hero-professional-text {
-  transition: all 0.3s ease-in-out;
-  text-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.08),
-    0 2px 6px rgba(0, 0, 0, 0.04);
+.hero-enhanced-text {
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   
-  line-height: 1.7;
-  letter-spacing: 0.025em;
-  color: #1f2937;
-}
-
-.hero-professional-text:hover {
-  transform: translateY(-1px);
+  filter: 
+    drop-shadow(0 1px 3px rgba(71, 85, 105, 0.15))
+    drop-shadow(0 2px 6px rgba(71, 85, 105, 0.1))
+    drop-shadow(0 4px 12px rgba(71, 85, 105, 0.05));
+  
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.12),
-    0 4px 8px rgba(0, 0, 0, 0.06);
-  color: #111827;
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(71, 85, 105, 0.08),
+    0 4px 8px rgba(71, 85, 105, 0.04);
+  
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
 }
 
-.hero-subtitle .absolute {
-  animation: subtle-breathe 6s ease-in-out infinite;
+.hero-enhanced-text:hover {
+  transform: translateY(-1px);
+  opacity: 1;
+  
+  filter: 
+    drop-shadow(0 2px 4px rgba(71, 85, 105, 0.2))
+    drop-shadow(0 4px 8px rgba(71, 85, 105, 0.12))
+    drop-shadow(0 8px 16px rgba(71, 85, 105, 0.08));
+  
+  text-shadow: 
+    0 2px 3px rgba(0, 0, 0, 0.12),
+    0 4px 6px rgba(71, 85, 105, 0.1),
+    0 8px 12px rgba(71, 85, 105, 0.06);
 }
 
-@keyframes subtle-breathe {
+@keyframes gradientFlow {
   0%, 100% {
-    opacity: 0.6;
-    transform: scale(1.05);
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 25%;
   }
   50% {
-    opacity: 0.4;
-    transform: scale(1.08);
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 75%;
   }
 }
 
-/* Professional responsive design */
+.animate-subtle-glow {
+  animation: subtleGlow 6s ease-in-out infinite;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1.03) rotate(0deg);
+  }
+  33% {
+    opacity: 0.7;
+    transform: scale(1.05) rotate(0.5deg);
+  }
+  66% {
+    opacity: 0.4;
+    transform: scale(1.04) rotate(-0.5deg);
+  }
+}
+
+/* Enhanced responsive design */
 @media (max-width: 480px) {
   .hero-subtitle {
     font-size: 1.125rem !important;
-    line-height: 1.6 !important;
+    line-height: 1.4 !important;
     text-align: center;
   }
   
-  .hero-professional-text {
+  .hero-enhanced-text {
+    line-height: 1.4;
+    letter-spacing: 0.015em;
+    background-size: 150% 150%;
+    
+    filter: 
+      drop-shadow(0 1px 2px rgba(71, 85, 105, 0.12))
+      drop-shadow(0 2px 4px rgba(71, 85, 105, 0.08));
+    
     text-shadow: 
-      0 1px 2px rgba(0, 0, 0, 0.06),
-      0 2px 4px rgba(0, 0, 0, 0.03);
-    line-height: 1.6;
-    letter-spacing: 0.02em;
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      0 2px 3px rgba(71, 85, 105, 0.06);
   }
 }
 
 @media (min-width: 481px) and (max-width: 640px) {
   .hero-subtitle {
     font-size: 1.25rem !important;
-    line-height: 1.7 !important;
+    line-height: 1.5 !important;
+  }
+  
+  .hero-enhanced-text {
+    line-height: 1.5;
+    background-size: 175% 175%;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
   .hero-subtitle {
     font-size: 1.5rem !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
+  }
+  
+  .hero-enhanced-text {
+    line-height: 1.5;
   }
 }
 
 @media (min-width: 1025px) {
-  .hero-professional-text {
+  .hero-enhanced-text {
+    background-size: 250% 250%;
+    line-height: 1.6;
+    letter-spacing: 0.025em;
+    
+    filter: 
+      drop-shadow(0 2px 4px rgba(71, 85, 105, 0.18))
+      drop-shadow(0 4px 8px rgba(71, 85, 105, 0.12))
+      drop-shadow(0 8px 16px rgba(71, 85, 105, 0.08));
+    
     text-shadow: 
-      0 2px 4px rgba(0, 0, 0, 0.1),
-      0 4px 8px rgba(0, 0, 0, 0.05),
-      0 8px 16px rgba(0, 0, 0, 0.03);
-    line-height: 1.8;
-    letter-spacing: 0.03em;
+      0 2px 3px rgba(0, 0, 0, 0.12),
+      0 4px 6px rgba(71, 85, 105, 0.1),
+      0 8px 12px rgba(71, 85, 105, 0.06),
+      0 16px 24px rgba(71, 85, 105, 0.04);
   }
 }
 
-/* Subtle enhancement for better readability */
+/* Enhanced typography */
 .hero-subtitle {
   font-family: 'Tajawal', sans-serif;
-  font-variation-settings: 'wght' 500;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hero-professional-text {
+.hero-enhanced-text {
   font-weight: 600;
-  opacity: 0.95;
+  font-variation-settings: 'wght' 600;
 }
 
-.hero-professional-text:hover {
-  opacity: 1;
-}
-
-/* Clean focus states for accessibility */
+/* Accessibility improvements */
 .hero-subtitle:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 4px;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enhanced-text,
+  .animate-subtle-glow {
+    animation: none;
+  }
 }
 
 /* Responsive helpers - تحسين النص في الجوال */
