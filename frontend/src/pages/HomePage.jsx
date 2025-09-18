@@ -192,13 +192,21 @@ const HomePage = () => {
  {/* مساحة بيضاء فارغة للجوال فقط - تم تقليلها بسبب العنوان الأكبر */}
 
  <div className="block sm:hidden h-6"></div>
-<p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl mb-0 sm:mb-8 leading-relaxed font-medium tracking-wide relative overflow-hidden">
-  <span className="hero-text-gradient bg-gradient-to-r from-amber-700 via-orange-600 to-amber-800 bg-clip-text text-transparent font-semibold leading-relaxed tracking-wide relative z-10 block text-shadow-luxury">
-    نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
-  </span>
-  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-100/20 to-transparent opacity-60 blur-2xl transform rotate-1 scale-110 animate-subtle-float"></div>
-  <div className="absolute inset-0 bg-gradient-to-r from-orange-200/10 via-yellow-200/15 to-orange-200/10 opacity-40 blur-3xl transform -rotate-1 scale-105 animate-gentle-pulse"></div>
-</p>
+<div className="hero-subtitle-wrapper mb-0 sm:mb-8 relative">
+  <p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl leading-relaxed font-medium tracking-wide relative overflow-hidden">
+    <span className="hero-premium-text bg-gradient-to-r from-yellow-400 via-amber-500 via-orange-500 via-yellow-600 to-amber-400 bg-clip-text text-transparent font-bold leading-relaxed tracking-wide relative z-20 block animate-shimmer bg-[length:400%_100%]">
+      نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
+    </span>
+    
+    {/* طبقات الإضاءة المتعددة */}
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/30 to-transparent blur-3xl opacity-70 animate-glow-pulse scale-110 z-10"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-amber-200/20 via-yellow-200/40 via-orange-200/30 to-amber-200/20 blur-2xl opacity-80 animate-gentle-float scale-105 z-10"></div>
+    <div className="absolute inset-0 bg-gradient-to-r from-yellow-100/10 via-amber-100/20 to-yellow-100/10 blur-xl opacity-60 animate-soft-wave scale-102 z-10"></div>
+    
+    {/* تأثير الوهج الخارجي */}
+    <div className="absolute -inset-4 bg-gradient-to-r from-transparent via-yellow-200/20 to-transparent blur-3xl opacity-50 animate-outer-glow z-0"></div>
+  </p>
+</div>
  {/* زر ابدأ مشروعك الآن فقط في الجوال - تم نقله للأسفل */}
  
  {/* الأزرار معاً في سطح المكتب */}
