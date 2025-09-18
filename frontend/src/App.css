@@ -104,85 +104,89 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
   text-decoration: none !important;
 }
 
-/* Hero subtitle enhancements */
+/* Hero subtitle enhancements - Elegant Design v2 */
 .hero-subtitle-container {
   position: relative;
   z-index: 2;
 }
 
 .hero-subtitle {
-  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
   transition: all 0.3s ease-in-out;
 }
 
 .hero-subtitle span {
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-size: 200% 100%;
+  animation: gradientShift 4s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
 }
 
-.hero-subtitle span:hover {
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.hero-subtitle:hover span {
   transform: translateY(-1px);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  filter: brightness(1.1);
 }
 
-.hero-subtitle-highlight {
-  animation: slideInUp 0.8s ease-out 0.6s both;
+/* Minimal trust indicators */
+.hero-subtitle-container .flex:last-child {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-@keyframes slideInUp {
+.hero-subtitle-container .flex:last-child > div:nth-child(1) {
+  animation: slideInLeft 0.6s ease-out 0.6s both;
+}
+
+.hero-subtitle-container .flex:last-child > div:nth-child(3) {
+  animation: slideInRight 0.6s ease-out 0.8s both;
+}
+
+@keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translate3d(0, 30px, 0);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 }
 
-/* Trust badge animations */
-.hero-subtitle-highlight > div {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.hero-subtitle-highlight > div:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  background: rgba(255,255,255,0.95);
-}
-
-.hero-subtitle-highlight > div:nth-child(1) {
-  animation: fadeInLeft 0.6s ease-out 0.8s both;
-}
-
-.hero-subtitle-highlight > div:nth-child(2) {
-  animation: fadeInRight 0.6s ease-out 1s both;
-}
-
-@keyframes fadeInLeft {
+@keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translate3d(-30px, 0, 0);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translate3d(30px, 0, 0);
+/* Enhanced gradient background animation */
+.hero-subtitle .absolute {
+  animation: backgroundPulse 3s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
   }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
   }
 }
 
-/* Responsive adjustments for hero subtitle */
+/* Responsive adjustments for hero subtitle v2 */
 @media (max-width: 480px) {
   .hero-subtitle-container {
     text-align: center;
@@ -190,31 +194,25 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
   
   .hero-subtitle {
     font-size: 1.125rem !important;
-    line-height: 1.4 !important;
-    margin-bottom: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.25rem !important;
   }
   
-  .hero-subtitle-highlight {
+  .hero-subtitle-container .flex:last-child {
     flex-direction: column;
-    gap: 0.5rem !important;
+    gap: 0.75rem !important;
     margin-top: 1rem !important;
   }
   
-  .hero-subtitle-highlight > div {
-    padding: 0.5rem 0.75rem !important;
-    font-size: 0.75rem !important;
+  .hero-subtitle-container .flex:last-child .w-px {
+    display: none;
   }
 }
 
 @media (min-width: 481px) and (max-width: 640px) {
   .hero-subtitle {
     font-size: 1.25rem !important;
-    line-height: 1.5 !important;
-  }
-  
-  .hero-subtitle-highlight > div {
-    padding: 0.625rem 1rem !important;
-    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
   }
 }
 
