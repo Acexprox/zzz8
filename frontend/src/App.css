@@ -104,164 +104,47 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
   text-decoration: none !important;
 }
 
-/* Hero subtitle enhancements - Premium Beautiful Design */
-.hero-subtitle-wrapper {
-  position: relative;
-  z-index: 3;
-  padding: 1rem 0;
-}
-
+/* Hero subtitle enhancements - Professional Clean Design */
 .hero-subtitle {
   position: relative;
   z-index: 2;
 }
 
-.hero-premium-text {
-  background-size: 400% 100%;
-  background-image: linear-gradient(
-    90deg,
-    #facc15 0%,
-    #f59e0b 15%,
-    #d97706 30%,
-    #ca8a04 45%,
-    #eab308 60%,
-    #f59e0b 75%,
-    #facc15 100%
-  );
-  animation: shimmerGold 4s ease-in-out infinite;
-  filter: 
-    drop-shadow(0 0 8px rgba(251, 191, 36, 0.4))
-    drop-shadow(0 2px 12px rgba(245, 158, 11, 0.3))
-    drop-shadow(0 4px 24px rgba(217, 119, 6, 0.2))
-    drop-shadow(0 8px 48px rgba(202, 138, 4, 0.1));
-  
+.hero-professional-text {
+  transition: all 0.3s ease-in-out;
   text-shadow: 
-    0 0 10px rgba(251, 191, 36, 0.5),
-    0 0 20px rgba(245, 158, 11, 0.3),
-    0 0 40px rgba(217, 119, 6, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.04);
   
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  line-height: 1.7;
+  letter-spacing: 0.025em;
+  color: #1f2937;
 }
 
-.hero-premium-text:hover {
-  transform: translateY(-2px);
-  filter: 
-    drop-shadow(0 0 12px rgba(251, 191, 36, 0.6))
-    drop-shadow(0 4px 16px rgba(245, 158, 11, 0.4))
-    drop-shadow(0 8px 32px rgba(217, 119, 6, 0.3))
-    drop-shadow(0 16px 64px rgba(202, 138, 4, 0.2));
-  
+.hero-professional-text:hover {
+  transform: translateY(-1px);
   text-shadow: 
-    0 0 15px rgba(251, 191, 36, 0.7),
-    0 0 30px rgba(245, 158, 11, 0.5),
-    0 0 60px rgba(217, 119, 6, 0.3),
-    0 4px 8px rgba(0, 0, 0, 0.15);
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.06);
+  color: #111827;
 }
 
-@keyframes shimmerGold {
-  0% {
-    background-position: -200% 0;
-    transform: scale(1);
-  }
-  50% {
-    background-position: 200% 0;
-    transform: scale(1.002);
-  }
-  100% {
-    background-position: -200% 0;
-    transform: scale(1);
-  }
+.hero-subtitle .absolute {
+  animation: subtle-breathe 6s ease-in-out infinite;
 }
 
-@keyframes glow-pulse {
-  0%, 100% {
-    opacity: 0.7;
-    transform: scale(1.1) rotate(0deg);
-  }
-  25% {
-    opacity: 0.9;
-    transform: scale(1.15) rotate(0.5deg);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.12) rotate(0deg);
-  }
-  75% {
-    opacity: 0.85;
-    transform: scale(1.13) rotate(-0.5deg);
-  }
-}
-
-@keyframes gentle-float {
-  0%, 100% {
-    opacity: 0.8;
-    transform: scale(1.05) translateY(0px) rotate(0deg);
-  }
-  33% {
-    opacity: 0.9;
-    transform: scale(1.08) translateY(-1px) rotate(0.3deg);
-  }
-  66% {
-    opacity: 0.75;
-    transform: scale(1.06) translateY(1px) rotate(-0.3deg);
-  }
-}
-
-@keyframes soft-wave {
+@keyframes subtle-breathe {
   0%, 100% {
     opacity: 0.6;
-    transform: scale(1.02) translateX(0px);
+    transform: scale(1.05);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.04) translateX(2px);
+    opacity: 0.4;
+    transform: scale(1.08);
   }
 }
 
-@keyframes outer-glow {
-  0%, 100% {
-    opacity: 0.5;
-    transform: scale(1.2) rotate(0deg);
-  }
-  25% {
-    opacity: 0.7;
-    transform: scale(1.25) rotate(1deg);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.22) rotate(0deg);
-  }
-  75% {
-    opacity: 0.65;
-    transform: scale(1.24) rotate(-1deg);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmerGold 4s ease-in-out infinite;
-}
-
-.animate-glow-pulse {
-  animation: glow-pulse 6s ease-in-out infinite;
-}
-
-.animate-gentle-float {
-  animation: gentle-float 8s ease-in-out infinite;
-  animation-delay: 1s;
-}
-
-.animate-soft-wave {
-  animation: soft-wave 5s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-.animate-outer-glow {
-  animation: outer-glow 10s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
-/* Premium responsive design */
+/* Professional responsive design */
 @media (max-width: 480px) {
   .hero-subtitle {
     font-size: 1.125rem !important;
@@ -269,21 +152,12 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
     text-align: center;
   }
   
-  .hero-premium-text {
-    background-size: 300% 100%;
-    filter: 
-      drop-shadow(0 0 4px rgba(251, 191, 36, 0.4))
-      drop-shadow(0 1px 6px rgba(245, 158, 11, 0.3))
-      drop-shadow(0 2px 12px rgba(217, 119, 6, 0.2));
-    
+  .hero-professional-text {
     text-shadow: 
-      0 0 8px rgba(251, 191, 36, 0.4),
-      0 0 16px rgba(245, 158, 11, 0.2),
-      0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hero-subtitle-wrapper {
-    padding: 0.5rem 0;
+      0 1px 2px rgba(0, 0, 0, 0.06),
+      0 2px 4px rgba(0, 0, 0, 0.03);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -291,10 +165,6 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
   .hero-subtitle {
     font-size: 1.25rem !important;
     line-height: 1.7 !important;
-  }
-  
-  .hero-premium-text {
-    background-size: 350% 100%;
   }
 }
 
@@ -306,45 +176,36 @@ body { font-family: var(--font-family); background-color: var(--bg-color); color
 }
 
 @media (min-width: 1025px) {
-  .hero-premium-text {
-    background-size: 500% 100%;
-    filter: 
-      drop-shadow(0 0 10px rgba(251, 191, 36, 0.5))
-      drop-shadow(0 3px 15px rgba(245, 158, 11, 0.4))
-      drop-shadow(0 6px 30px rgba(217, 119, 6, 0.3))
-      drop-shadow(0 12px 60px rgba(202, 138, 4, 0.2));
-    
+  .hero-professional-text {
     text-shadow: 
-      0 0 12px rgba(251, 191, 36, 0.6),
-      0 0 24px rgba(245, 158, 11, 0.4),
-      0 0 48px rgba(217, 119, 6, 0.3),
-      0 3px 6px rgba(0, 0, 0, 0.1);
+      0 2px 4px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.05),
+      0 8px 16px rgba(0, 0, 0, 0.03);
+    line-height: 1.8;
+    letter-spacing: 0.03em;
   }
 }
 
-/* تأثيرات إضافية للجمال */
-.hero-subtitle-wrapper::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: radial-gradient(ellipse at center, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: breathe 8s ease-in-out infinite;
-  z-index: -1;
+/* Subtle enhancement for better readability */
+.hero-subtitle {
+  font-family: 'Tajawal', sans-serif;
+  font-variation-settings: 'wght' 500;
 }
 
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.2;
-  }
+.hero-professional-text {
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.hero-professional-text:hover {
+  opacity: 1;
+}
+
+/* Clean focus states for accessibility */
+.hero-subtitle:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* Responsive helpers - تحسين النص في الجوال */
