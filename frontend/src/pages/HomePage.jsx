@@ -193,24 +193,22 @@ const HomePage = () => {
 
  <div className="block sm:hidden h-6"></div>
  <div className="hero-subtitle-container mb-0 sm:mb-8">
-   <p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl text-gray-600 leading-relaxed font-medium mb-4 sm:mb-6 tracking-wide">
-     <span className="inline-block opacity-90 transform transition-all duration-500 hover:opacity-100">
-       نضع بين يديك تجربة مالية مبتكرة ومصممة 
+   <p className="hero-subtitle text-3xl sm:text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium mb-6 tracking-wide relative">
+     <span className="inline-block relative z-10 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent">
+       نضع بين يديك تجربة مالية مبتكرة ومصممة لتلبية معاملاتك اليومية بأعلى درجات الكفاءة وترتقي بأسلوبك المالي الرقمي إلى مستوى جديد من الراحة والثقة.
      </span>
-     <br className="hidden sm:block" />
-     <span className="inline-block opacity-90 transform transition-all duration-500 hover:opacity-100" style={{animationDelay: '0.3s'}}>
-       لتلبية معاملاتك اليومية بأعلى درجات الكفاءة
-     </span>
+     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-100/30 to-transparent blur-xl opacity-50 animate-pulse"></div>
    </p>
    
-   <div className="hero-subtitle-highlight flex items-center justify-center sm:justify-start gap-3 mt-4 sm:mt-6">
-     <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200/50">
-       <div className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
-       <span className="text-sm font-medium text-gray-700">آمن وموثوق</span>
+   <div className="flex items-center justify-center sm:justify-start gap-4 mt-4">
+     <div className="flex items-center gap-2 text-sm text-gray-600">
+       <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-ping"></div>
+       <span className="font-medium">موثوق من آلاف العملاء</span>
      </div>
-     <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-gray-200/50">
-       <div className="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-       <span className="text-sm font-medium text-gray-700">سريع ومبتكر</span>
+     <div className="w-px h-4 bg-gray-300"></div>
+     <div className="flex items-center gap-2 text-sm text-gray-600">
+       <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+       <span className="font-medium">معاملات آمنة 100%</span>
      </div>
    </div>
  </div>
